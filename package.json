@@ -1,0 +1,49 @@
+{
+  "name": "JobsFair",
+  "version": "1.0.0",
+  "description": "Get your dream job",
+  "main": "server.js",
+  "repository": {},
+  "author": "Gabriel Vergnaud",
+  "license": "MIT",
+  "scripts": {
+    "dev": "SET PORT=3000 && node --harmony server.js",
+    "buildWebrex": "NODE_ENV=dev next build",
+    "startWebrex": "PORT=4002 NODE_ENV=dev node server.js",
+    "build": "next build",
+    "start": "PORT=4000 NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "autoprefixer": "7.1.5",
+    "axios": "^0.17.1",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-define": "^1.2.0",
+    "babel-plugin-wrap-in-js": "^1.1.0",
+    "express": "^4.14.1",
+    "glob": "^7.1.2",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.3.1",
+    "next": "4.1.0",
+    "next-redux-wrapper": "^1.0.0",
+    "next-routes": "^1.2.0",
+    "nextjs-dynamic-routes": "^2.1.6",
+    "node-sass": "4.5.3",
+    "normalize.css": "^7.0.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-loader": "^2.0.7",
+    "raw-loader": "^0.5.1",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-js-pagination": "^3.0.0",
+    "react-redux": "^5.0.1",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "styled-jsx-plugin-sass": "0.2.0",
+    "underscore": "^1.8.3"
+  },
+  "engines": {
+    "node": ">=7.5"
+  }
+}

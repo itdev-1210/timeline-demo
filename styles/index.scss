@@ -1,0 +1,216 @@
+$brand-color:#00BCD4;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
+}
+input,
+textarea {
+    font-family: 'Lato', sans-serif;
+}
+strong{
+	font-weight: bold;
+}
+
+* {
+    transition: all 0.2s ease 0s;
+}
+
+.timeline{
+	width: 300px;
+	margin: 50px auto;
+	.step{
+		text-align: center;
+		position: relative;
+		.stepInfo{
+			position: absolute;
+			bottom: 0px;
+			text-align: center;
+			left: 50%;
+			transform: translateX(-50%) scale(1);
+			background: #fff;
+			cursor: pointer;
+			.info{
+				transform: scale(1);
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				padding: 5px 0px;
+			}
+			.date{
+				font-size: 10px;
+				color: #dadada;
+				padding: 0px 0px 4px;
+			}
+			.icon{
+				left: 50%;
+				width: 24px;
+				height: 24px;
+				margin-left: -1px;
+			}
+			.name{
+				p{
+					display: inline-block;
+					font-weight: bold;
+					padding: 2px 0px;
+				}
+				span{
+					display: inline-block;
+				}
+			}
+			&:hover{
+				.info{
+					transform: scale(1.2);
+					p{
+						color: $brand-color;
+					}
+				}
+				.moreInfo{
+					z-index: 1;
+					opacity: 1;
+				}
+			}
+		}
+		.moreInfo{
+			display: none;
+			width: 200px;
+			display: block;
+			position: absolute;
+			background: #ebebeb;
+			bottom: 0pc;
+			left: 0px;
+			transform: translateX(-110%);
+			text-align: left;
+			padding: 10px;
+			opacity: 0;
+			border-radius: 5px;
+			z-index: -1;
+			p{
+				padding: 5px;
+				strong{
+					padding-right: 10px;
+				}
+			}
+			&::after{
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 0 10px 15px;
+				border-color: transparent transparent transparent #ebebeb;
+				position: absolute;
+				right: -15px;
+				bottom: 5px;
+			}
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			height: 100%;
+			top:0px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: #cacaca;
+			width: 2px;
+		}
+		&:first-child{
+			&::after{
+				content: "Today";
+				font-style: italic;
+				background: #fff;
+				position: relative;
+				z-index: 1;
+				padding: 10px;
+			}
+		}
+		&:last-child{
+			margin-top: 10px;
+			&::after{
+				content: "1/1/1970";
+				font-style: italic;
+				background: #fff;
+				position: relative;
+				z-index: 1;
+				padding: 5px 10px;
+			}
+		}
+		&.empty{
+			background: #fff;
+			padding-bottom: 85px;
+			padding-top: 15px;
+			.bigCircle{
+				width: 20px;
+				height: 20px;
+				border-radius: 100%;
+				overflow: hidden;
+				background-color: #cacaca;
+				margin: 0px auto;
+			}
+			.smallCircle{
+				background: #fff;
+				z-index: 1;
+				position: relative;
+				padding: 1px 0px;
+				width: 20px;
+				margin: 0px auto;
+				.circle{
+					width: 5px;
+					height: 5px;
+					border-radius: 100%;
+					overflow: hidden;
+					border: 2px solid #cacaca;
+					margin: 10px auto;
+					
+				}
+			}
+		}
+	}
+}

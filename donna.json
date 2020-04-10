@@ -1,0 +1,17 @@
+{
+  "do": [
+    [
+      "open",
+      "Atom",
+      "/"
+    ],
+    [
+      "browse",
+      "localhost:3000"
+    ],
+    [
+      "run",
+      "npm run dev"
+    ]
+  ]
+}
